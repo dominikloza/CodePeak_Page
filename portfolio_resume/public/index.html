@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>CodePeak</title>
+  <style>
+    .loader {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loader img {
+      width: 250px;
+      animation: sizeChange 2s infinite ease-in-out alternate-reverse;
+    }
+      @keyframes sizeChange {
+        to {
+          transform: translateY(40px);
+        }
+      }
+  
+
+    .loader_text {
+      color: black;
+      font-size: 44px;
+      text-align: center;
+      font-family: 'Pacifico', cursive;
+      padding: 0 20px;
+    }
+  </style>
+</head>
+
+<body style="margin: 0">
+  <div id="root"></div>
+  <div class="loader-container">
+    <div class="loader">
+      <img src="./loader.png" alt="Loader">
+      <h2 class="loader_text">Rocket Launching...
+      </h2>
+    </div>
+  </div>
+</body>
+
+</html>
