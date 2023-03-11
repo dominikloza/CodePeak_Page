@@ -8,7 +8,7 @@ const Section = styled.div`
     justify-content: center;
     position: fixed;
     z-index: 3;
-
+    width: 100%;
     @media only screen and (max-width: 768px){
         width: 100%;
         position: relative;
@@ -16,10 +16,12 @@ const Section = styled.div`
   `
 
 const Container = styled.div`
-    width: 1400px;
+    width: 100%;
+    max-width: 1400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
 
     @media only screen and (max-width: 768px){
         width: 100%;
@@ -92,7 +94,7 @@ function Navbar() {
         <Section>
             <Container>
                 <Links>
-                    <Logo src={logo}/>
+                    <Logo src={logo} />
                     <List>
                         <ListItem href="#hero">
                             Home

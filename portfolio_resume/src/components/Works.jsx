@@ -18,23 +18,30 @@ const data =
 
 const Section = styled.div`
   height: 100vh;
+  width: 100%;
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
   position: relative;
 
+  @media only screen and (max-width: 768px){
+      height: auto;
+    }
+
 `
 
 const Container = styled.div`
-  width: 1400px;
+  width: 100%;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (max-width: 768px){
+  @media only screen and (max-width: 1130px){
       width: 100%;
       flex-direction: column;
-      padding-top: 50px;
+      padding-top: 20px;
     }
+
 `
 
 const Left = styled.div`
@@ -43,6 +50,10 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: start;
+
+  @media only screen and (max-width: 1130px){
+    flex: 1;
+    }
 
   @media only screen and (max-width: 768px){
         justify-content: center;
@@ -55,6 +66,15 @@ const List = styled.ul`
   display: flex; 
   flex-direction: column;
   gap: 20px;
+
+  @media only screen and (max-width: 1130px){
+      width: 100%;
+      box-sizing: border-box;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 100px 30px 0 30px;
+    }
+
   @media only screen and (max-width: 768px){
         padding: 20px;
         justify-content: center;
@@ -88,14 +108,13 @@ const ListItem = styled.li`
       @keyframes moveText {
         to{
           width: 100%;
-
         }
       }
     }
   }
 
   @media only screen and (max-width: 768px){
-        font-size: 36px;
+        font-size: 26px;
         color: white;
         -webkit-text-stroke: 0px;
         background-color: #fa9804;
@@ -111,6 +130,10 @@ const ListItem = styled.li`
 `
 const Right = styled.div`
   flex: 3;
+  @media only screen and (max-width: 768px){
+        flex: 1;
+        height: 500px;
+    }
 `
 
 const Works = () => {

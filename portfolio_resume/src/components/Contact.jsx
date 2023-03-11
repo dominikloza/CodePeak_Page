@@ -9,10 +9,19 @@ const Section = styled.div`
 `
 const Container = styled.div`
   width: 100%;
+  padding-left: 20px;
   height: 100%;
   display: flex;
   justify-content: space-between;
   gap: 50px;
+
+  @media only screen and (max-width: 1130px){
+      padding-bottom: 100px;
+    }
+
+  @media only screen and (max-width: 768px){
+      padding-left:0;
+    }
 
 `
 const Left = styled.div`
@@ -20,10 +29,10 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 350px;
   margin-top: 50px;
 
   @media only screen and (max-width: 768px){
+      width: 100%;
         justify-content: center;
         margin-right: 0;
         padding: 20px 20px 100px 20px;
@@ -61,13 +70,14 @@ const Inform = styled.p`
 `
 
 const Form = styled.form`
-  width: 500px;
+  width: 100%;;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   gap: 25px;
   
   @media only screen and (max-width: 768px){
-        width: 300px;
+      box-sizing: border-box;
     }
 `
 const Input = styled.input`
@@ -149,7 +159,7 @@ const Contact = () => {
             <Input placeholder="Email" name="email" />
             <TextArea placeholder='Wrie your message' name="message" rows={10} />
             <Button type='submit'> Send </Button>
-            {success && <Inform>Your message has been sent.<br/> We'll get back to you soon!</Inform> }
+            {success && <Inform>Your message has been sent.<br /> We'll get back to you soon!</Inform>}
           </Form>
         </Left>
         <Right>

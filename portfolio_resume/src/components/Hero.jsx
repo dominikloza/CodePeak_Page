@@ -15,20 +15,22 @@ import React from 'react'
 
 const Section = styled.div`
   height: 100vh;
+  width: 100%;
   scroll-snap-align: center;
   display: flex;
   flex-direction:column;
   align-items: center;
 
   @media only screen and (max-width: 768px){
-        height: 200vh;
+        height: 180vh;
         scroll-snap-align: start;
     }
   `
 const Container = styled.div`
   height: 100%;
   scroll-snap-align: center;
-  width: 1400px;
+  width: 100%;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
 
@@ -45,6 +47,7 @@ const HeroText = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  padding-left: 40px;
 
   @media only screen and (max-width: 768px){
         flex: 1;
@@ -53,17 +56,20 @@ const HeroText = styled.div`
     }
 `
 const HeroImages = styled.div`
- flex: 3;
- position:relative;
+  flex-shrink: 1;
+  flex: 3;
+  position: relative;
+
  @media only screen and (max-width: 768px){
         flex: 1;
         width: 100%;
-        height: 100vh; 
+        height: 100vh;
+        overflow: hidden;
     }
 `
 const Title = styled.h1`
   font-size: 64px;
-  margin-bottom:10px;
+  margin-bottom: 10px;
   color: white;
 
   @media only screen and (max-width: 768px){
@@ -110,8 +116,8 @@ const Button = styled.button`
     border-radius: 5px;
     font-weight: 900;
     box-shadow: 0 0 0 0 #fa9804;
-	transform: scale(1);
-	animation: pulse 2s infinite;
+	  transform: scale(1);
+	  animation: pulse 2s infinite;
     @keyframes pulse {
 	    0% {
 	    	transform: scale(0.95);
@@ -148,9 +154,11 @@ const Img = styled.img`
   }
 
   @media only screen and (max-width: 768px){
-        width: 400px;
-        right: 0;
-        pointer-events: auto;
+      width: 100%;
+      max-width: 450px;  
+      right: 0;
+      pointer-events: auto;
+      padding: 100px 0;
     }
 `
 const Shadow = styled.img`

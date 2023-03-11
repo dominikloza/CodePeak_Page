@@ -20,6 +20,11 @@ const Desc = styled.div`
     font-size: 14px;
     font-weight: 300;
 
+    @media only screen and (max-width: 1130px){
+        top: unset;
+        bottom: 120px;
+    }
+
     @media only screen and (max-width: 768px){
       display: none;
     }
