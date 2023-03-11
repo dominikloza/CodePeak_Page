@@ -7,6 +7,7 @@
 ## Technologies
 * React
 * JS
+* Three.js
 * HTML & CSS
 * Styled components
 * AWS Amplify ( to host the page)
